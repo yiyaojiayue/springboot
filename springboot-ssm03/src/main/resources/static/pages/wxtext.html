@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>简单表单提交</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<form action="/wx/t1" method="POST">
+  <label for="name">姓名:</label>
+  <input type="text" id="name" name="name" required>
+  <!-- "name" 属性定义了提交的数据字段名，并且 "required" 属性要求用户必须填写 -->
+  <label for="mes">问题描述:</label>
+  <input type="text" id="mes" name="mes" required>
+
+  <label for="name2">审核员:</label>
+  <input type="text" id="name2" name="name2" required>
+
+
+  <br><br>
+
+  <!-- 提交按钮 -->
+  <input type="submit" value="提交">
+</form>
+</body>
+</html>

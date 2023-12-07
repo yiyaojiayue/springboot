@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/springbook_mybatis01/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_mybatisplus/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_mybatisplus02/pom.xml" />
+        <option value="$PROJECT_DIR$/springbook-ssm03/pom.xml" />
+        <option value="$PROJECT_DIR$/springbook-Security04/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-Security04/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_mybatis01/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-ssm03/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_Security05/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-aop06/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-file07/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-Thymeleaf08/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-oracle09/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-interface10/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

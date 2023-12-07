@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">填写表单</title>
+    <style>
+        .user {
+            width: 100%;
+            height: 65px;
+            background-color: white;
+            padding-top: 5px;
+        }
+        .user-body {
+            width: 94%;
+            margin-left: 3%;
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+        }
+        .selectFirst-ifFirst-button>label {
+            margin-right: 10px;
+        }
+        .selectFirst-ifFirst-button>label {
+            margin-right: 10px;
+        }
+        .question-content-tag-btn-active {
+            background-color: #5b99ec;
+            color: white;
+        }
+        .required {
+            color: red;
+        }
+        .question-title {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 5%;
+            margin-top: 10px;
+            border-bottom: 1px solid #dee1e6;
+            background-color: white;
+        }
+        .btn {
+            margin-top: 10px;
+            height: 50px;
+        }
+        .btn-btn {
+            width: 90%;
+            height: 80%;
+            margin-left: 5%;
+            background-color: #469bdb;
+            color: white;
+            border: none;
+        }
+
+        .question-content-tag-btn {
+
+            flex-basis: 20%;
+            height: 30px;
+            margin-left: 4%;
+            border-radius: 20px;
+            border: none;
+            border: 1px solid #888888;
+            color: #888888;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .question-content>textarea {
+            border: none;
+            resize: none;
+            outline: none;
+            width: 94%;
+            margin-left: 3%;
+            margin-top: 10px;
+        }
+
+        .question-content-tagContent {
+            margin-left: 4%;
+            width: 92%;
+            word-wrap: break-word;
+        }
+
+        .gray-line {
+            width: 100%; /* 设置线的宽度 */
+            height: 10px; /* 设置线的高度 */
+            background-color: gray; /* 设置线的颜色 */
+            margin-top: 15px;
+        }
+        .gray-line2 {
+            width: 100%; /* 设置线的宽度 */
+            height: 0.1px; /* 设置线的高度 */
+            background-color: gray; /* 设置线的颜色 */
+            margin-top: 1px;
+        }
+
+        #user-body-number {
+            font-size: 0.8em;
+            color: #8f8f94;
+        }
+    </style>
+</head>
+<body>
+<form th:action="@{/hello}">
+    <div class="user">
+        <div class="user-body">
+            <span id="user-body-name" th:text="'姓名:'+${name}">姓名:@表单头信息.Rows[0]["姓名"]</span>
+            <span id="user-body-number" th:text="'门诊号:'+${hao}">门诊号:@表单头信息.Rows[0]["病人id"]</span>
+            <span style="color: orange" id="serve-type" th:text="'服务类型:'+${Service}">服务类型:免费咨询</span>
+        </div>
+        <div class="gray-line"></div>
+        <div><span style="color: orange" th:text="${fuz}"></span></div>
+        <div class="gray-line2"></div>
+        <div class="selectFirst-ifFirst">
+            <label class="required">*</label>
+            <span>是否初诊？</span>
+            <div class="selectFirst-ifFirst-button">
+                <input type="radio" name="radio" id="radio1" value="2" />
+                <label>复诊</label>
+                <input type="radio" name="radio" id="radio1" value="1" />
+                <label>初诊</label>
+            </div>
+        </div>
+        <div class="question-title">
+            <label class="required">*</label>
+            请描述您需要咨询的问题
+        </div>
+
+        <div class="question-content">
+            <div class="question-content-tag" th:each="item:${registration.problems}">
+                <span class="question-content-tag-btn" th:text="${item}" style="width: 7%">糖尿病</span>
+            </div>
+            <div class="question-content-tagContent">
+            </div>
+            <textarea id="text" class="text" cols="50" maxlength="150" rows="7"
+                      style="word-break:break-all;word-wrap: break-word;"
+                      placeholder="请输入你需要咨询的具体问题,如发病时间,发病状况,病情描述,就诊经历等..."></textarea>
+        </div>
+        <div class="question-content-tagContent"></div>
+
+        <div class="question-content-tagContent">
+            <input type="button" class="btn-btn" value="提交订单">
+        </div>
+    </div>
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+
+</head>
+<body>
+<!-- 获取 access_token 然后在获取jsapi_ticket   -->
+<!--
+https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxe0f7b0e3d819a4f2&secret=97c330f2bec92540b1dda23ace022ad0
+https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=74_4B3p8UX2RruUkovXN1AblllPJjg2xkPcTBa1nrZnkZasRatGDB1pNufmPuMzDutRxjL0fgQ9jmy-9DhLm82LhuLewbgW0zVEB_6OIdoe2uaHsqmRBotnNpWGkYEAZYbACAPON&type=jsapi
+
+签名网址
+https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=jsapisign
+-->
+<h2>hello world</h2>
+<button onclick="init()">点击调用</button>
+
+
+
+<script>
+
+    const APP_ID = 'wxe0f7b0e3d819a4f2';
+    let nonxestr = Math.random().toString().split(".")[1];
+    let timestamp = Math.floor(Date.now()/1000);
+    let ticket = "O3SMpm8bG7kJnF36aXbe8w8WUbnaHEbsqgacoj4zlRcMk628-j8lwrK1DsX5WUFpSeYoh8xNTWMyd-vjEk1p6g";
+
+    const str = "jsapi_ticket="+ticket+"&noncestr="+nonxestr+"&timestamp="+timestamp+"&url=hlw.senree.net";
+
+
+  function init(){
+      wx.config({
+          debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+          appId: APP_ID, // 必填，公众号的唯一标识
+          timestamp: 1699855465 , // 必填，生成签名的时间戳
+          nonceStr: "555", // 必填，生成签名的随机串
+          signature: '8717afef1b732b52abc6bca8401e54482f5e45e5',// 必填，签名
+          jsApiList: ['updateAppMessageShareData'] // 必填，需要使用的JS接口列表
+      });
+
+      wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
+          wx.updateAppMessageShareData({
+              title: '小易', // 分享标题
+              desc: '微信测试', // 分享描述
+              link: 'https://hlw.senree.net/your_page.html', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+              imgUrl: './../static/wx.jpg', // 分享图标
+              success: function () {
+                  // 设置成功
+                  console.log("设置成功!!!!")
+              },
+              cancel:function (){
+                  console.log('失败！！！')
+              }
+          })
+      });
+
+      console.log("初始化完成！！！");
+  }
+
+
+
+
+    console.log("成功！！！")
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
