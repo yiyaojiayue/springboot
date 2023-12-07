@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-ssm03" />
+        <module name="springboot-oracle09" />
+        <module name="springboot_Security05" />
+        <module name="springboot-Security04" />
+        <module name="springboot_mybatis01" />
+        <module name="springboot-Thymeleaf08" />
+        <module name="springboot-aop06" />
+        <module name="springboot_mybatisplus02" />
+        <module name="springboot-file07" />
+        <module name="springboot" />
+        <module name="springboot-interface10" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springbook-ssm03" target="1.8" />
+      <module name="springboot_Security04" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springbook-ssm03" options="-parameters" />
+      <module name="springboot-Security04" options="-parameters" />
+      <module name="springboot-Thymeleaf08" options="-parameters" />
+      <module name="springboot-aop06" options="-parameters" />
+      <module name="springboot-file07" options="-parameters" />
+      <module name="springboot-interface10" options="-parameters" />
+      <module name="springboot-oracle09" options="-parameters" />
+      <module name="springboot-ssm03" options="-parameters" />
+      <module name="springboot_Security04" options="-parameters" />
+      <module name="springboot_Security05" options="-parameters" />
+      <module name="springboot_mybatis01" options="-parameters" />
+      <module name="springboot_mybatisplus02" options="-parameters" />
+    </option>
+  </component>
+</project>

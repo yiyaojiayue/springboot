@@ -1,0 +1,10 @@
+# 项目排除路径
+/springboot-aop06/target/
+/springboot-file07/target/
+/springboot-oracle09/target/
+/springboot-Security04/target/
+/springboot-ssm03/target/
+/springboot-Thymeleaf08/target/
+/springboot_mybatis01/target/
+/springboot_mybatisplus02/target/
+/springboot_Security05/target/

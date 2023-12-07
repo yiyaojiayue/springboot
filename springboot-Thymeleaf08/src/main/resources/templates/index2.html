@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index2</title>
+</head>
+<body>
+<h2 th:text="'姓名：'+${student.name}">姓名：张三</h2>
+<!--获取集合数据-->
+<ul th:each="item:${student.getInterest()}">
+  <li th:text="${item}">未知</li>
+</ul>
+
+<div th:object="${student}">
+  <p>Name: <span th:text="*{name}">三</span>.</p>
+  <p>Age: <span th:text="*{age}">18</span>.</p>
+</div>
+
+<!-- if标签 -->
+<p th:if="${student.isvip}">会员</p>
+
+<!-- case标签-->
+<div th:switch="${student.sex}">
+    <p th:case="1">男</p>
+    <p th:case="2">女</p>
+    <p th:case="*">未知</p>
+</div>
+<!--读取配置文件内容-->
+
+<table >
+    <tr>
+        <td>name：</td>
+        <td th:text="#{bigsai.nane}"></td>
+    </tr>
+    <tr>
+        <td>年龄：</td>
+        <td th:text="#{bigsai.age}"></td>
+    </tr>
+    <tr>
+        <td>province：</td>
+        <td th:text="#{province}"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
